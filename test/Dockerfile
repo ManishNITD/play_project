@@ -14,7 +14,7 @@ RUN sbt clean compile stage
 FROM openjdk:11-jre-slim
 
 # Copy the binary files from the previous stage
-COPY --from=build /app/target/universal/stage /appg
+COPY --from=build /app/target/universal/stage /app
 # Set the working directory in the container
 WORKDIR /app
 
